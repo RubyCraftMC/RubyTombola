@@ -55,22 +55,22 @@ public final class RubyTombola extends JavaPlugin implements CommandExecutor {
                 graphics.setColor(Color.WHITE);
                 graphics.setFont(new Font("Arial", Font.PLAIN, 10));
                 graphics.drawString(Integer.toString(number), j * 14 + 2, i * 14 + 12);
+                graphics.setColor(Color.RED);
+                graphics.setFont(new Font("Arial", Font.PLAIN, 15));
+                graphics.drawString("X", j * 14 + 2, i * 14 + 13);
             }
         }
         MapRenderer renderer = new MapRenderer() {
             @Override
             public void render(MapView map, MapCanvas canvas, Player player) {
-                canvas.drawImage(0, 22, image);
+                canvas.drawImage(0, 40, image);
             }
         };
-        List<MapRenderer> renderers = map.getRenderers();
-        renderers.clear();
-        renderers.add(renderer);
+        map.getRenderers().forEach(map::removeRenderer);
         map.addRenderer(renderer);
         int mapId = map.getId();
         ItemStack mapItem = new ItemStack(Material.MAP, 1, (short) mapId);
         player.getInventory().
-
                 addItem(mapItem);
         return true;
     }
