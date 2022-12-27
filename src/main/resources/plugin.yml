@@ -1,0 +1,6 @@
+name: RubyTombola
+version: '${project.version}'
+main: it.rubycraft.rubytombola.RubyTombola
+commands:
+  mappa:
+    description: "ciao"
