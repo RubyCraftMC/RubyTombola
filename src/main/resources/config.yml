@@ -1,0 +1,26 @@
+version: 1.0
+prefix: "TOMBOLAH > "
+
+number-exit: "E' uscito il numero %numero%!"
+ambo-do: "il player %player% ha fatto ambo!"
+terno-do: "il player %player% ha fatto terno!"
+quaterna-do: "il player %player% ha fatto quaterna!"
+cinquina-do: "Il player %player% ha fatto cinquina!"
+tombola-do: "Il player %player% ha fatto tombola!"
+
+commands:
+  ambo:
+    - ""
+    - ""
+  terno:
+    - ""
+    - ""
+  quaterna:
+    - ""
+    - ""
+  cinquina:
+    - ""
+    - ""
+  tombola:
+    - ""
+    - ""
